@@ -2,6 +2,7 @@
   "packages": {
     "foundation": {},
     "twitter-api": {},
-    "parsleyjs": {}
+    "parsleyjs": {},
+    "cron-tick": {}
   }
 }

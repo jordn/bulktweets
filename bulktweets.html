@@ -15,12 +15,21 @@
   </div>
 
   <div class="row">
-    <div class="small-12 columns">
+    <div class="small-10 small-offset-1 columns">
+      <h4 class="subheader">
+      One tweet per line.<br>
+      Press <strong>TWEET</strong> to tweet a random line.</h4>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="small-10 small-offset-1 columns">
       {{> tweetform}}
     </div>
   </div>
   <div class="row">
-    <div class="small-12 columns">
+    <div class="small-10 small-offset-1 columns">
       {{> content}}
     </div>
 
@@ -31,7 +40,7 @@
   <form>
     <div class="row">
       <div class="small-10 columns">
-        <textarea id="tweetlist" placeholder="Tweet List — Put each tweet on a new line">{{tweetlist}}</textarea>
+        <textarea id="tweet-list" placeholder="Tweet List — Put each tweet on a new line">{{tweetlist}}</textarea>
       </div>
       <div class="small-2 columns">
         <input type="button" id="save-button" class="button" value="Save" />

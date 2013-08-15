@@ -19,16 +19,13 @@ if (Meteor.isClient) {
 
 
   Template.tweetform.events({
-    'click #save-button' : function(event) {
-      save_textarea(event);
-    },
     'keyup #tweet-list' : function(event) {
+      $('#save-status').text("Saving...");
       save_textarea(event);
-    },
-    'change #tweet-list' : function(event) {
-      save_textarea(event);
-    },
-    
+      window.setTimeout(function () {
+        $('#save-status').text("Saved");
+      }, 200)
+    }
   });
 
   Template.tweetform.events({
@@ -92,7 +89,7 @@ if (Meteor.isServer) {
   // });
 
 
-  var twitter = new TwitterApi();
+  var twitter = new Twitter();
   Meteor.methods({
       postTweet: function (text) {
           // console.log(Meteor.user());

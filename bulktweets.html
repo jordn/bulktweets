@@ -3,33 +3,38 @@
 </head>
 
 <body>
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="panel">
-        <span class="title">Bulk Tweets</span>
-        <span class="login">
-          {{loginButtons}}
-        </span>
+  <div class="header">
+    <div class="row">
+      <div class="large-12 columns">
+        <div class="panel">
+          <span class="title">Bulk Tweets</span>
+          <span class="login">
+            {{loginButtons}}
+          </span>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="small-10 small-offset-1 columns">
+    <div class="small-6 columns">
       <h4 class="subheader">
       One tweet per line.<br>
-      Press <strong>TWEET</strong> to tweet a random line.</h4>
+      Press <strong>Tweet</strong> to send out a random line.</h4>
     </div>
-
   </div>
 
   <div class="row">
-    <div class="small-10 small-offset-1 columns">
+    <div class="small-10 columns">
       {{> tweetform}}
     </div>
+    <div class="small-2 columns">
+      <input type="button" id="tweet-button" class="button" value="Tweet" />
+    </div>
   </div>
+
   <div class="row">
-    <div class="small-10 small-offset-1 columns">
+    <div class="small-12 columns">
       {{> content}}
     </div>
 
@@ -39,13 +44,11 @@
 <template name="tweetform">
   <form>
     <div class="row">
-      <div class="small-10 columns">
+      <div class="small-12 columns">
         <textarea id="tweet-list" placeholder="Tweet List — Put each tweet on a new line">{{tweetlist}}</textarea>
+        <div id="save-status">Saved</div>
       </div>
-      <div class="small-2 columns">
-        <input type="button" id="save-button" class="button" value="Save" />
-        <input type="button" id="tweet-button" class="button" value="Tweet" />
-      </div>
+    </div>
   </form>
 </template>
 

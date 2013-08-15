@@ -67,7 +67,7 @@ function tweet_randomly (tweetText) {
   console.log(tweet);
   Meteor.call("postTweet", tweet, function(err,result) {
       if(!err) {
-          console.log(tweet +" posted");
+          alert("Tweeted: \n'"+tweet +"'");
       }
       else {
         console.log(err);

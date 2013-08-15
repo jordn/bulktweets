@@ -1,13 +1,22 @@
 /* CSS declarations go here */
 
 
-.title {
+header {
+  background-color: #3f3f3f;
+  margin-bottom:1em;
+}
+
+.title {/*
   font-size: 2em;
+  font-weight: 600;*/
+  margin: 0;
+  color: white;
 }
 
 .login {
   font-size: 1em;
-  float: right;
+  margin-top: 8px;
+  color: white;
 }
 
 #tweet-list {

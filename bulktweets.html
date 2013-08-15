@@ -3,34 +3,29 @@
 </head>
 
 <body>
-  <div class="header">
+
+  <header class="ribbon">
     <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <span class="title">Bulk Tweets</span>
-          <span class="login">
-            {{loginButtons}}
-          </span>
-        </div>
+      <div class="large-3 columns text-left">
+        <h1 class="title">BulkTweets</h1>
+      </div>
+      <div class="large-3 columns text-right login">
+        {{loginButtons}}
       </div>
     </div>
-  </div>
+  </header>
 
   <div class="row">
-    <div class="small-6 columns">
+    <div class="small-12 columns">
       <h4 class="subheader">
-      One tweet per line.<br>
-      Press <strong>Tweet</strong> to send out a random line.</h4>
+      Automate the sending out of tweets from a set list.<br>
+      One tweet per line. Press <strong>Tweet</strong> to send one out a random line.</h4>
     </div>
   </div>
 
   <div class="row">
-    <div class="small-10 columns">
       {{> tweetform}}
-    </div>
-    <div class="small-2 columns">
-      <input type="button" id="tweet-button" class="button" value="Tweet" />
-    </div>
+
   </div>
 
   <div class="row">
@@ -43,19 +38,25 @@
 
 <template name="tweetform">
   <form>
-    <div class="row">
-      <div class="small-12 columns">
-        <textarea id="tweet-list" placeholder="Tweet List — Put each tweet on a new line">{{tweetlist}}</textarea>
-        <div id="save-status">Saved</div>
+    <div class="small-10 columns">
+      <div class="row">
+        <div class="small-12 columns">
+          <textarea id="tweet-list" placeholder="Tweet List — Put each tweet on a new line">{{tweetlist}}</textarea>
+          <div id="save-status">Saved</div>
+        </div>
       </div>
     </div>
+    <div class="small-2 columns">
+      <input type="button" id="tweet-button" class="button" value="Tweet" />
+    </div>
   </form>
+
 </template>
 
 <template name="content">
   <div class="row">
     <div class="small-12 columns">
-      <h5>BulkTweet Users</h5>
+      <h5>Users of BulkTweets</h5>
       <table class="table">
       {{#each users}}
         {{> user}}

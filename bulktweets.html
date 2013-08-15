@@ -1,0 +1,62 @@
+<head>
+  <title>Bulk Tweets</title>
+</head>
+
+<body>
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="panel">
+        <span class="title">Bulk Tweets</span>
+        <span class="login">
+          {{loginButtons}}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
+      {{> tweetform}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      {{> content}}
+    </div>
+
+  </div>
+</body>
+
+<template name="tweetform">
+  <form>
+    <div class="row">
+      <div class="small-10 columns">
+        <textarea id="tweetlist" placeholder="Tweet List — Put each tweet on a new line">{{tweetlist}}</textarea>
+      </div>
+      <div class="small-2 columns">
+        <input type="button" id="save-button" class="button" value="Save" />
+        <input type="button" id="tweet-button" class="button" value="Tweet" />
+      </div>
+  </form>
+</template>
+
+<template name="content">
+  <div class="row">
+    <div class="small-12 columns">
+      <h5>BulkTweet Users</h5>
+      <table class="table">
+      {{#each users}}
+        {{> user}}
+      {{/each}}
+      </table>
+    </div>
+</template>
+
+<template name="user">
+  <tr>
+    <td>
+      <a target="_blank" href="http://twitter.com/{{services.twitter.screenName}}"><img src="{{services.twitter.profile_image_url}}"/>{{profile.name}}</a>
+      <iframe style="width: 300px; height: 20px;" src="//platform.twitter.com/widgets/follow_button.html?screen_name={{services.twitter.screenName}}" height="240" width="320" frameborder="0" scrolling="no"></iframe>
+    </td>
+  </tr> 
+</template>

@@ -1,0 +1,17 @@
+/* CSS declarations go here */
+
+
+.title {
+  font-size: 2em;
+}
+
+.login {
+  font-size: 1em;
+  float: right;
+}
+
+#tweetlist {
+  font-family: monospace;
+  height: 20em;
+  width:;
+}

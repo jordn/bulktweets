@@ -1,0 +1,27 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "foundation": {},
+      "twitter-api": {},
+      "parsleyjs": {}
+    },
+    "packages": {
+      "foundation": {
+        "git": "https://github.com/ewall/meteor-foundation.git",
+        "tag": "v4.3.1",
+        "commit": "ecc55cd1ae470c902e010e5986a26c66e810d989"
+      },
+      "twitter-api": {
+        "git": "https://github.com/Sewdn/meteor-twitter-api.git",
+        "tag": "v0.1.0",
+        "commit": "c7a0dbfe61f6207d40cc1863c45b179aadadbb6a"
+      },
+      "parsleyjs": {
+        "git": "https://github.com/nate-strauser/meteor-parsleyjs.git",
+        "tag": "v0.1.0",
+        "commit": "5ec267dcc1af252774a23dfc8b0c9c495fe2a8cb"
+      }
+    }
+  }
+}
